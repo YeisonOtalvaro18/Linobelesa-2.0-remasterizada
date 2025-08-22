@@ -114,5 +114,17 @@
   </footer>
 <script src="app.js"></script>
 <script src="userMenu.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const userData = JSON.parse(localStorage.getItem('userData'));
+      const authToken = localStorage.getItem('authToken');
+      const userMenu = document.getElementById('userMenu');
+      const loginBtn = document.getElementById('loginBtn');
+      if (!userData || !authToken) {
+        if (userMenu) userMenu.style.display = 'none';
+        if (loginBtn) loginBtn.style.display = 'inline-block';
+      }
+    });
+  </script>
 </body>
 </html>
