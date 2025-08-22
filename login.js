@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const reqNumber = document.getElementById('req-number');
     const reqSpecial = document.getElementById('req-special');
     
-    // URL de tu API backend - ¡IMPORTANTE! Cambia según tu puerto
-    const API_URL = 'http://localhost:3000/api'; // Asegúrate que coincida con tu backend
+    // URL de tu API backend
+    const API_URL = 'http://localhost:3000/api';
 
     // Alternar entre formularios
     showLogin.addEventListener('click', function(e) {
@@ -142,10 +142,13 @@ document.addEventListener('DOMContentLoaded', function() {
             contraseña
         };
         
+        let submitButton;
+        let originalText;
+        
         try {
             // Mostrar indicador de carga
-            const submitButton = registerForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
+            submitButton = registerForm.querySelector('button[type="submit"]');
+            originalText = submitButton.textContent;
             submitButton.textContent = 'Registrando...';
             submitButton.disabled = true;
             
@@ -176,8 +179,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Error: ' + data.message);
             }
         } catch (error) {
-            console.error('Error:', error);
-            alert('Error de conexión. Intenta nuevamente.');
+            console.error('Error detallado:', error);
+            alert('Error de conexión. Verifica que el servidor esté ejecutándose en el puerto 3000');
         } finally {
             // Restaurar botón
             if (submitButton) {
@@ -194,10 +197,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const correo = document.getElementById('loginEmail').value;
         const contraseña = document.getElementById('loginPassword').value;
         
+        let submitButton;
+        let originalText;
+        
         try {
             // Mostrar indicador de carga
-            const submitButton = loginForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
+            submitButton = loginForm.querySelector('button[type="submit"]');
+            originalText = submitButton.textContent;
             submitButton.textContent = 'Iniciando sesión...';
             submitButton.disabled = true;
             
@@ -221,14 +227,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('userData', JSON.stringify(data.usuario));
                 }
                 
-                // Redirigir al usuario a la página principal
-                window.location.href = '/bienvenida.html'; // Cambia por tu URL de destino
+                // Redirigir al usuario a la página de bienvenida
+                window.location.href = 'bienvenida.html';
             } else {
                 alert('Error: ' + data.message);
             }
         } catch (error) {
-            console.error('Error:', error);
-            alert('Error de conexión. Intenta nuevamente.');
+            console.error('Error detallado:', error);
+            alert('Error de conexión. Verifica que el servidor esté ejecutándose en el puerto 3000');
         } finally {
             // Restaurar botón
             if (submitButton) {
@@ -237,4 +243,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Verificar si ya está logueado al cargar la página
+    checkLoginStatus();
 });
+
+// Función para verificar estado de login
+function checkLoginStatus() {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    const authToken = localStorage.getItem('authToken');
+    
+    if (userData && authToken) {
+        // Si ya está logueado, redirigir a bienvenida
+        window.location.href = 'bienvenida.html';
+    }
+}
+
+// Función para cerrar sesión (se usa en bienvenida.html)
+function logout() {
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('userData');
+    alert('Sesión cerrada correctamente');
+    window.location.href = 'linobelesa.html';
+}
