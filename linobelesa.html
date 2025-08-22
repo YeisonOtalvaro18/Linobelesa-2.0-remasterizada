@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linobelesa | Belleza y Estilo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="linobelesa.css">
+  <link rel="shortcut icon" href="./IMG/logolinobelesa.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="auth-container">
+    <div class="brand-section">
+      <div class="brand-logo">Linobelesa</div>
+      <p class="brand-tagline">Ofrecemos los mejores productos de belleza y estilo.</p>
+      <img src="https://placehold.co/400x300/ba6cc1/FFFFFF?text=Belleza+y+Estilo" alt="Productos de belleza"
+        class="brand-image">
+
+    </div>
+
+    <div class="forms-section">
+      <!-- Formulario de Registro -->
+      <form id="registerForm" class="auth-form">
+        <h2>Crear Cuenta</h2>
+        <p>Completa el formulario para registrarte</p>
+
+        <div class="form-section">
+          <h3>Nombre</h3>
+          <div class="form-group">
+            <input type="text" id="username" placeholder="Ingresa tu nombre" required>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Apellido</h3>
+          <div class="form-group">
+            <input type="text" id="apellido" placeholder="Ingresa tu apellido" required>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Correo electrónico</h3>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Ingresa tu correo" required>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Contraseña</h3>
+          <div class="form-group">
+            <input type="password" id="password" placeholder="Crea una contraseña" required>
+            <span class="toggle-password" id="togglePassword">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Confirmar contraseña</h3>
+          <div class="form-group">
+            <input type="password" id="confirmPassword" placeholder="Repite la contraseña" required>
+            <span class="toggle-password" id="toggleConfirmPassword">
+              <i class="far fa-eye"></i>
+            </span>
+            <div id="passwordError" class="error"></div>
+          </div>
+        </div>
+
+        <div class="password-requirements">
+          <p>La contraseña debe contener:</p>
+          <ul>
+            <li id="req-length">Al menos 8 caracteres</li>
+            <li id="req-number">Al menos un número</li>
+            <li id="req-special">Al menos un carácter especial</li>
+          </ul>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">Acepto los <strong>Términos y Condiciones</strong></label>
+        </div>
+
+        <div class="separator"></div>
+
+        <button type="submit" class="auth-button">Registrarse</button>
+
+        <p class="auth-switch">¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia sesión</a></p>
+      </form>
+
+      <!-- Formulario de Inicio de Sesión -->
+      <form id="loginForm" class="auth-form hidden">
+        <h2>Iniciar Sesión</h2>
+        <p>Ingresa tus credenciales para acceder</p>
+
+        <div class="form-section">
+          <h3>Correo electrónico</h3>
+          <div class="form-group">
+            <input type="email" id="loginEmail" placeholder="Ingresa tu correo" required>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Contraseña</h3>
+          <div class="form-group">
+            <input type="password" id="loginPassword" placeholder="Ingresa tu contraseña" required>
+            <span class="toggle-password" id="toggleLoginPassword">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="remember">
+          <label for="remember">Recordar mi sesión</label>
+        </div>
+
+        <button type="submit" class="auth-button">Iniciar Sesión</button>
+
+        <p class="auth-link"><a href="#">¿Olvidaste tu contraseña?</a></p>
+
+        <p class="auth-switch">¿No tienes cuenta? <a href="#" id="showRegister">Regístrate</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+
+</html>

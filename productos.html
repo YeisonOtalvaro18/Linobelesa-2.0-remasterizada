@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos | Linobelesa</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="productos.css">
+  <link rel="shortcut icon" href="./IMG/logolinobelesa.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="./IMG/logolinobelesa.jpg" alt="logo">
+        <h1>Linobelesa</h1>
+      </div>
+
+      <!-- MENÚ -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
+      </nav>
+
+      <!-- ACCIONES -->
+      <div class="acciones">
+        <i class="bi bi-search" id="btnBuscar" title="Buscar"></i>
+        <i class="bi bi-cart3" id="btnCarrito" title="Carrito"></i>
+        <button class="btn-login"><a href="linobelesa.html">Login</a></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barra buscador -->
+  <div class="buscador" id="buscador">
+    <input type="text" placeholder="Buscar productos..." id="inputBuscar">
+  </div>
+
+  <!-- Modal Carrito -->
+  <div id="carritoModal">
+    <div class="carrito-contenido">
+      <h3>Carrito de Compras</h3>
+      <ul id="listaCarrito"></ul>
+      <button onclick="cerrarCarrito()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Linobelesa</h3>
+        <p>Ofrecemos los mejores productos de belleza y estilo.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="bi bi-whatsapp"></i> WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Linobelesa. Todos los derechos reservados.
+    </div>
+  </footer>
+<script src="app.js"></script>
+</body>
+</html>

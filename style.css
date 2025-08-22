@@ -1,0 +1,295 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #fafafa;
+}
+
+/* ====== HEADER ====== */
+header {
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 75px;
+}
+
+.logo h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #6a0dad;
+  letter-spacing: 1px;
+}
+
+/* MENÚ */
+nav ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: #6a0dad;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #6a0dad;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ACCIONES */
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.acciones i {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 50%;
+  background: #f2f2f2;
+}
+
+.acciones i:hover {
+  color: #fff;
+  background: #6a0dad;
+}
+
+.btn-login {
+  background: #6a0dad;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-login a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.btn-login:hover {
+  background: #000;
+}
+
+/* BUSCADOR */
+.buscador {
+  display: none;
+  position: absolute;
+  top: 120px;
+  right: 50px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.buscador input {
+  padding: 12px 18px;
+  border: 2px solid #6a0dad;
+  border-radius: 10px;
+  width: 300px;
+  outline: none;
+  font-size: 1.05rem;
+}
+
+/* MODAL CARRITO */
+#carritoModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.carrito-contenido {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  width: 500px;
+  max-height: 500px;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carrito-contenido h3 {
+  margin-bottom: 20px;
+  color: #6a0dad;
+  font-size: 1.6rem;
+}
+
+.carrito-contenido button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #6a0dad;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.carrito-contenido button:hover {
+  background: #000;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #6a0dad;
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 25px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 15px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .acciones {
+    justify-content: center;
+    gap: 15px;
+  }
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+  .logo img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .acciones i {
+    font-size: 1.5rem;
+    padding: 6px;
+  }
+  .btn-login {
+    padding: 8px 18px;
+  }
+  .buscador input {
+    width: 220px;
+  }
+  .footer-col {
+    min-width: 100%;
+  }
+}
