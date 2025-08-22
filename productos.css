@@ -8,6 +8,9 @@
 
 body {
   background: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ====== HEADER ====== */
@@ -36,11 +39,9 @@ header {
   align-items: center;
   gap: 15px;
 }
-
 .logo img {
   height: 75px;
 }
-
 .logo h1 {
   font-size: 2.2rem;
   font-weight: bold;
@@ -54,7 +55,6 @@ nav ul {
   gap: 50px;
   list-style: none;
 }
-
 nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -63,7 +63,6 @@ nav ul li a {
   position: relative;
   transition: 0.3s;
 }
-
 nav ul li a::after {
   content: "";
   position: absolute;
@@ -75,11 +74,9 @@ nav ul li a::after {
   border-radius: 3px;
   transition: width 0.3s ease;
 }
-
 nav ul li a:hover {
   color: #6a0dad;
 }
-
 nav ul li a:hover::after {
   width: 100%;
 }
@@ -91,7 +88,6 @@ nav ul li a:hover::after {
   gap: 30px;
   flex-wrap: wrap;
 }
-
 .acciones i {
   font-size: 2rem;
   cursor: pointer;
@@ -101,7 +97,6 @@ nav ul li a:hover::after {
   border-radius: 50%;
   background: #f2f2f2;
 }
-
 .acciones i:hover {
   color: #fff;
   background: #6a0dad;
@@ -115,82 +110,81 @@ nav ul li a:hover::after {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .btn-login a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
 }
-
 .btn-login:hover {
   background: #000;
 }
 
-/* BUSCADOR */
-.buscador {
-  display: none;
-  position: absolute;
-  top: 120px;
-  right: 50px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+/* ====== CONTENIDO PRINCIPAL ====== */
+main {
+  flex: 1; /* Para empujar el footer hacia abajo */
+  padding: 40px 10%;
+  margin-bottom: 40px;
 }
 
-.buscador input {
-  padding: 12px 18px;
-  border: 2px solid #6a0dad;
-  border-radius: 10px;
-  width: 300px;
-  outline: none;
-  font-size: 1.05rem;
-}
-
-/* MODAL CARRITO */
-#carritoModal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+.caja2 {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  gap: 30px;
 }
 
-.carrito-contenido {
-  background: #fff;
-  padding: 30px;
-  border-radius: 18px;
-  width: 500px;
-  max-height: 500px;
-  overflow-y: auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+.col-12 {
+  width: 300px;
 }
 
-.carrito-contenido h3 {
-  margin-bottom: 20px;
-  color: #6a0dad;
-  font-size: 1.6rem;
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
 }
-
-.carrito-contenido button {
-  margin-top: 20px;
-  padding: 10px 20px;
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 15px;
+}
+.card-title {
+  font-size: 1.2rem;
+  color: rgb(140, 16, 242);
+}
+.card-text {
+  font-size: 0.9rem;
+  margin: 10px 0;
+  color: #555;
+}
+.btn {
+  width: 120px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 0.9rem;
+  background-color: rgb(140, 16, 242);
   border: none;
-  background: #6a0dad;
+  border-radius: 20px;
   color: white;
-  border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
-  font-size: 1rem;
+  transition: background 0.3s;
 }
-
-.carrito-contenido button:hover {
-  background: #000;
+.btn:hover {
+  background-color: rgb(100, 10, 200);
+}
+.btn-carrito {
+  width: 160px;
 }
 
 /* ====== FOOTER ====== */
@@ -198,9 +192,8 @@ footer {
   background: #6a0dad;
   color: #fff;
   padding: 40px 20px;
-  margin-top: 40px;
+  margin-top: auto; /* Para que se quede abajo */
 }
-
 .footer-container {
   max-width: 1400px;
   margin: auto;
@@ -209,35 +202,28 @@ footer {
   justify-content: space-between;
   gap: 30px;
 }
-
 .footer-col {
   flex: 1;
   min-width: 250px;
 }
-
 .footer-col h3 {
   margin-bottom: 15px;
   font-size: 1.3rem;
 }
-
 .footer-col ul {
   list-style: none;
 }
-
 .footer-col ul li {
   margin-bottom: 10px;
 }
-
 .footer-col ul li a {
   text-decoration: none;
   color: #fff;
   transition: 0.3s;
 }
-
 .footer-col ul li a:hover {
   text-decoration: underline;
 }
-
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
@@ -253,7 +239,6 @@ footer {
     padding: 0 20px;
   }
 }
-
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -277,7 +262,6 @@ footer {
     height: 60px;
   }
 }
-
 @media (max-width: 480px) {
   .acciones i {
     font-size: 1.5rem;
@@ -293,3 +277,27 @@ footer {
     min-width: 100%;
   }
 }
+
+/* ====== POPUP CARRITO ====== */
+.cart-popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #28a745;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+  font-size: 14px;
+  z-index: 2000;
+}
+
+.cart-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+

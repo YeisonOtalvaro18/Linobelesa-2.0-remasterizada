@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos | Linobelesa</title>
+  <title>Productos</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="productos.css">
   <link rel="shortcut icon" href="./IMG/logolinobelesa.ico" type="image/x-icon">
@@ -29,27 +29,119 @@
 
       <!-- ACCIONES -->
       <div class="acciones">
-        <i class="bi bi-search" id="btnBuscar" title="Buscar"></i>
-        <i class="bi bi-cart3" id="btnCarrito" title="Carrito"></i>
+  <i class="bi bi-search" id="btnBuscar" title="Buscar"></i>
+  <i class="bi bi-cart3" id="btnCarrito" title="Carrito"></i>
   <span id="userMenu" style="display:none;"></span>
   <button class="btn-login" id="loginBtn"><a href="linobelesa.html">Login</a></button>
+<script src="userMenu.js"></script>
       </div>
     </div>
   </header>
-
-  <!-- Barra buscador -->
-  <div class="buscador" id="buscador">
-    <input type="text" placeholder="Buscar productos..." id="inputBuscar">
-  </div>
-
-  <!-- Modal Carrito -->
-  <div id="carritoModal">
-    <div class="carrito-contenido">
-      <h3>Carrito de Compras</h3>
-      <ul id="listaCarrito"></ul>
-      <button onclick="cerrarCarrito()">Cerrar</button>
-    </div>
-  </div>
+  
+  <main class="container">
+    <section class="caja2">
+      <!-- Producto -->
+      <div class="col-12">
+        <div class="card">
+          <img src="./IMG/cepillos.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Producto 1</h5>
+            <p class="card-text">Cepillos especiales para peinar pelo rizado.</p>
+            <input type="button" value="Comprar" class="btn" />
+            <input type="button" value="Agregar al carrito" class="btn btn-carrito" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <img src="./IMG/CHAMPUS-AROMINA-BIO.jpg" class="card-img-top" alt="Producto 2">
+          <div class="card-body">
+            <h5 class="card-title">Producto 2</h5>
+            <p class="card-text">Champus aromina.</p>
+            <input type="button" value="Comprar" class="btn" />
+            <input type="button" value="Agregar al carrito" class="btn btn-carrito" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <img src="./IMG/images (5).jpg" class="card-img-top" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title">Producto 3</h5>
+            <p class="card-text">Champu para rizos perfectos.</p>
+            <input type="button" value="Comprar" class="btn" />
+            <input type="button" value="Agregar al carrito" class="btn btn-carrito" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <img src="./IMG/3474637072476_1.jpg" class="card-img-top" alt="Producto 4">
+          <div class="card-body">
+            <h5 class="card-title">Producto 4</h5>
+            <p class="card-text">L'ORÉAL.</p>
+            <input type="button" value="Comprar" class="btn" />
+            <input type="button" value="Agregar al carrito" class="btn btn-carrito" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <img src="./IMG/images (6).jpg" class="card-img-top" alt="Producto 5">
+          <div class="card-body">
+            <h5 class="card-title">Producto 5</h5>
+            <p class="card-text">KÉRASTASE.</p>
+            <input type="button" value="Comprar" class="btn" />
+            <input type="button" value="Agregar al carrito" class="btn btn-carrito" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <img src="./IMG/images (8).jpg" class="card-img-top" alt="Producto 6">
+          <div class="card-body">
+            <h5 class="card-title">Producto 6</h5>
+            <p class="card-text">OIL.</p>
+            <input type="button" value="Comprar" class="btn" />
+            <input type="button" value="Agregar al carrito" class="btn btn-carrito" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <img src="./IMG/images (7).jpg" class="card-img-top" alt="Producto 7">
+          <div class="card-body">
+            <h5 class="card-title">Producto 7</h5>
+            <p class="card-text">ZIAJA.</p>
+            <input type="button" value="Comprar" class="btn" />
+            <input type="button" value="Agregar al carrito" class="btn btn-carrito" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <img src="./IMG/imagen_2025-02-06_172108378.jpg" class="card-img-top" alt="Producto 8">
+          <div class="card-body">
+            <h5 class="card-title">Producto 8</h5>
+            <p class="card-text">DEKOX.</p>
+            <input type="button" value="Comprar" class="btn" />
+            <input type="button" value="Agregar al carrito" class="btn btn-carrito" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <img src="./IMG/Fauno.jpg" class="card-img-top" alt="Producto 9">
+          <div class="card-body">
+            <h5 class="card-title">Producto 9</h5>
+            <p class="card-text">FAUNO.</p>
+            <input type="button" value="Comprar" class="btn" />
+            <input type="button" value="Agregar al carrito" class="btn btn-carrito" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -70,7 +162,7 @@
       <div class="footer-col">
         <h3>Redes Sociales</h3>
         <ul>
-          <li><a href="https://www.facebook.com/profile.php?id=100093308496757" target="_blank"><i class="bi bi-facebook"></i> Facebook</a></li>
+<li><a href="https://www.facebook.com/profile.php?id=100093308496757" target="_blank"><i class="bi bi-facebook"></i> Facebook</a></li>
           <li><a href="https://www.instagram.com/linobelesa/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a></li>
           <li><a href="https://api.whatsapp.com/send?phone=%2B573160448131&context=Afcnwn4GhF9lJAAL8YCDV1Nqnyn-NZ3yHKNXdqHhAzkhZy-0CNFyCUNXyxgjUcK72nwjjt1kJB4k-Vaed1Dv3Uorf7NrMTBMBH718bGab1CEtztpOazMGUvVCylPnB8f6vJPyF9rbJahT8e3yPwIeqdpPQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawMU44lleHRuA2FlbQIxMABicmlkETFkS0xHMnd4Ulc3bkFpb0JRAR58_90NUAvbOnbk-nlzwIjKynPvSocbw2zaffxrcHP6nRQYl2KKSSAz9JCWTA_aem_p29MLtN97VuVY5oJQ3KJcQ" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a></li>
         </ul>
@@ -80,7 +172,35 @@
       &copy; 2025 Linobelesa. Todos los derechos reservados.
     </div>
   </footer>
-<script src="app.js"></script>
-<script src="userMenu.js"></script>
+
+  <!-- Ventana flotante -->
+  <div id="cart-popup" class="cart-popup"></div>
+
+  <!-- JAVASCRIPT DENTRO DEL HTML -->
+  <script>
+    const botonesCarrito = document.querySelectorAll(".btn-carrito");
+    const popup = document.getElementById("cart-popup");
+
+    botonesCarrito.forEach(boton => {
+      boton.addEventListener("click", () => {
+        const userData = JSON.parse(localStorage.getItem('userData'));
+        const authToken = localStorage.getItem('authToken');
+        if (!userData || !authToken) {
+          popup.innerText = `Debes iniciar sesión para agregar productos al carrito.`;
+          popup.classList.add("show");
+          setTimeout(() => {
+            popup.classList.remove("show");
+          }, 2000);
+          return;
+        }
+        const producto = boton.parentElement.querySelector(".card-title").innerText;
+        popup.innerText = `✅ ${producto} agregado al carrito`;
+        popup.classList.add("show");
+        setTimeout(() => {
+          popup.classList.remove("show");
+        }, 2000);
+      });
+    });
+  </script>
 </body>
 </html>

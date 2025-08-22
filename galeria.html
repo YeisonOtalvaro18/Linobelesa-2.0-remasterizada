@@ -29,14 +29,28 @@
 
       <!-- ACCIONES -->
       <div class="acciones">
-        <i class="bi bi-search" id="btnBuscar" title="Buscar"></i>
-        <i class="bi bi-cart3" id="btnCarrito" title="Carrito"></i>
-        <button class="btn-login"><a href="login.html">Login</a></button>
+  <i class="bi bi-search" id="btnBuscar" title="Buscar"></i>
+  <i class="bi bi-cart3" id="btnCarrito" title="Carrito"></i>
+  <span id="userMenu" style="display:none;"></span>
+  <button class="btn-login" id="loginBtn"><a href="linobelesa.html">Login</a></button>
       </div>
     </div>
   </header>
 
+  <!-- Barra buscador -->
+  <div class="buscador" id="buscador" style="display:none; position:absolute; top:120px; right:20px; background:#fff; padding:15px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.15); z-index:2000;">
+    <input type="text" placeholder="Buscar productos..." id="inputBuscar" style="padding:12px 18px; border:2px solid #6a0dad; border-radius:10px; width:300px; outline:none; font-size:1.05rem;">
+  </div>
+
   <main>
+  <!-- Modal Carrito -->
+  <div id="carritoModal" style="display:none;">
+    <div class="carrito-contenido">
+      <h3>Carrito de Compras</h3>
+      <ul id="listaCarrito"></ul>
+      <button onclick="cerrarCarrito()">Cerrar</button>
+    </div>
+  </div>
     <div class="conten-ga">
       <div class="wrapper">
         <button class="gali">
@@ -100,9 +114,9 @@
       <div class="footer-col">
         <h3>Redes Sociales</h3>
         <ul>
-          <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
-          <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
-          <li><a href="#"><i class="bi bi-whatsapp"></i> WhatsApp</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100093308496757" target="_blank"><i class="bi bi-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/linobelesa/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=%2B573160448131&context=Afcnwn4GhF9lJAAL8YCDV1Nqnyn-NZ3yHKNXdqHhAzkhZy-0CNFyCUNXyxgjUcK72nwjjt1kJB4k-Vaed1Dv3Uorf7NrMTBMBH718bGab1CEtztpOazMGUvVCylPnB8f6vJPyF9rbJahT8e3yPwIeqdpPQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawMU44lleHRuA2FlbQIxMABicmlkETFkS0xHMnd4Ulc3bkFpb0JRAR58_90NUAvbOnbk-nlzwIjKynPvSocbw2zaffxrcHP6nRQYl2KKSSAz9JCWTA_aem_p29MLtN97VuVY5oJQ3KJcQ" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a></li>
         </ul>
       </div>
     </div>
@@ -111,5 +125,6 @@
     </div>
   </footer>
   <script src="app.js"></script>
+  <script src="userMenu.js"></script>
   </body>
   </html>
